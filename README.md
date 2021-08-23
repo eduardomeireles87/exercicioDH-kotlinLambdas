@@ -14,35 +14,81 @@ Lambdas
   
   
   
-  //Exemplo simples, retornando UNIT
+//Exemplo simples, retornando UNIT
+
 val soma = { a: Int, b: Int -> println(a + b) }
+  
+  
 //Exemplo simples retornando valor, não mais UNIT
+ 
 val somaComRetorno: (Int, Int) -> Int =
+  
+  
 {a: Int, b: Int -> a + b}
-//Exemplo mais detalhado em relacao aos parametros e retorno
-UNIT
+  
+  
+//Exemplo mais detalhado em relacao aos parametros e retorno UNIT
+ 
 val somaDeOutraFormaEPrinta: (Int, Int) -> Unit =
+  
+  
 { a: Int, b: Int -> println(a + b) }
-//Exemplo mais detalhado em relacao aos parametros porém
-simplificado após chave e retorno UNIT
+  
+  
+//Exemplo mais detalhado em relacao aos parametros porém simplificado após chave e retorno UNIT
+  
 val somaDeOutraFormaEPrintaSimplificado: (Int, Int) -> Unit =
+  
+  
 { a, b -> println(a + b) }
+  
+  
 //Exemplo com retorno de String
+
 val somaDeOutraFormaERetornaString: (Int, Int) -> String =
+  
+  
 { a: Int, b: Int ->
+  
+  
 val resultado = a + b
+  
+  
 "$resultado"
+  
+  
 }
+  
+  
 //Exemplo com um unico parametro, para usar o IT
+  
 val somaComUmUnicoParametro: (Int) -> Int = {
+  
+  
 it + 10
+  
+  
 }
-//Exemplo recebendo list como parametro e printnado apenas os
-números pares
+  
+  
+//Exemplo recebendo list como parametro e printnado apenas os números pares
+  
 val listaFiltrada: (List<Int>) -> Unit = {
+  
+  
 for(item in it){
+  
+  
 if(item % 2 == 0){
+  
+  
 println(item)
+  
+  
 }
+  
+  
 }
+  
+  
 }
